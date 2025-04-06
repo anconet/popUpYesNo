@@ -51,13 +51,13 @@ export default function usePopUpYesNo({
     };
 
     function handleYes() {
+        if (onClickYes) { onClickYes() }
         setShowPopUp(false);
-        if (onClickYes) onClickYes()
     };
 
     function handleNo() {
         setShowPopUp(false);
-        if (onClickNo) onClickNo()
+        if (onClickNo) { onClickNo() }
     };
 
     const possiblePopUpYesNo = (): JSX.Element => showPopUp ?
